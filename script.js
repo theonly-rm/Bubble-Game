@@ -1,17 +1,27 @@
 let score = 0;
 let hit;
 
-function makeBubbles(){
-    let clutter = "";
+document.querySelector(".pbody").addEventListener("click",function(dets){
+    console.log(dets.view.innerHeight)
+})
 
-    for(i=1;i<177;i++) {
+function makeBubbles(){
+    let body = document.querySelector(".pbody");
+    let clutter = "";
+    let numberOfBubbles;
+
+    if (window.innerWidth >= 600) {
+        numberOfBubbles = 177; 
+    } else {
+        numberOfBubbles = 78; 
+    }
+    for(i=2;i<=numberOfBubbles;i++) {
             clutter += `<div class="bubble">
             ${Math.floor(Math.random()*10)}
         </div>`
     }
-    
-    let body = document.querySelector(".pbody");
     body.innerHTML = clutter;
+    
 }
 
 function updateHit(){
