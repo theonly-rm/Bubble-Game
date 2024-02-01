@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: burlywood;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main h1{
+    font-weight: 800;
+    color: darkblue;
+}
+
+
+
+.panel {
+    height: 70%;
+    width: 70%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.phead {
+    height: 100px;
+    width: 100%;
+    background-color: darkmagenta;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 0 30%;
+
+}
+
+.elem {
+    color: antiquewhite;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
+
+
+.box {
+    padding: 5px 10px;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    color: black;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer {
+    width: 40px;
+}
+
+.pbody {
+    height: calc(100% - 100px);
+    background-color: yellowgreen;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.pbody h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble {
+    height: 40px;
+    width: 40px;
+    background-color: chocolate;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.bubble:hover {
+    background-color: brown;
+    cursor: pointer;
+}
