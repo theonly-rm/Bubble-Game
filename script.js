@@ -23,22 +23,27 @@ document.addEventListener('DOMContentLoaded', function () {
     function start() {
         let score = 0;
         let hit;
+        let body = document.querySelector(".pbody");
 
+        
         updateHit();
         makeBubbles();
         runTimer();
 
         function makeBubbles() {
-            let body = document.querySelector(".pbody");
+            
             let clutter = "";
             let numberOfBubbles;
 
             if (window.innerWidth >= 600) {
                 numberOfBubbles = 177;
             } else {
-                numberOfBubbles = 78;
+                body.style.display = "grid";
+                body.style.gridTemplateColumns  = "repeat(6, 1fr)";
+                body.style.gap= "10px"; /* Adjust the gap as needed */
+                numberOfBubbles = 60;
             }
-            for (let i = 2; i <= numberOfBubbles; i++) {
+            for (let i = 1; i <= numberOfBubbles; i++) {
                 clutter += `<div class="bubble">${Math.floor(Math.random() * 10)}</div>`
             }
             body.innerHTML = clutter;
@@ -58,6 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     clearInterval(timeInt);
                     document.querySelector(".pbody").innerHTML = `<h1>Game Over! </h1> <br> <h1>Your Final Score : ${score}</h1>`
+                    body.style.display = "flex";
                 }
             }, 1000);
         }
@@ -77,3 +83,4 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+

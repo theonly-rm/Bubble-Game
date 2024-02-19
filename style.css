@@ -82,6 +82,7 @@ html,body {
     flex-wrap: wrap;
     gap: 8px;
     overflow: hidden;
+    padding: 20px;
 }
 
 .pbody h1 {
@@ -99,6 +100,7 @@ html,body {
     justify-content: center;
     align-items: center;
     font-weight: 700;
+    font-size: large;
 }
 
 .bubble:hover {
@@ -127,5 +129,29 @@ html,body {
         width: 90%;
         border-radius: 10px;
         overflow: hidden;
+    }
+
+    .bubble {
+        height: 10vw;
+        width: 10vw;
+        background-color: chocolate;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        font-size: 5vw;
+    }
+
+    .elem {
+        color: antiquewhite;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 4vw;
+    }
+
+    .pbody {
+        padding: 6vw;
     }
 }
