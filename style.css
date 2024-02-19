@@ -121,6 +121,7 @@ html,body {
     border-radius: 10px;
     background-color: darkblue;
     color: antiquewhite;
+    cursor: pointer;
 }
 
 @media (max-width: 600px) {
